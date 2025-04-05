@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Médicos</title>
+    </head>
+    <body>
+        <h1> Todos os médicos da cliniLucas </h1>
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>Especialidade</th>
+                <th>CRM</th>
+                <th>E-mail</th>
+            </tr>
+            {% for i in medicos %}
+            <tr>         
+                <td> {{i.nome}} </td>
+                <td> {{i.especialidade}} </td>
+                <td> {{i.crm}} </td>
+                <td> {{i.email}} </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <button type="button">Voltar</button>
+    </body>
+</html>

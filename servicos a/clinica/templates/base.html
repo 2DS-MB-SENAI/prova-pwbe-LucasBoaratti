@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CliniLucas</title>
+    </head>
+    <body>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Comic Sans MS", sans-serif;
+            }
+
+            .container {
+                max-width: 1440px;
+                margin: 0 auto;
+            }
+
+            body {
+                background-color: mediumpurple;
+            }
+
+            h1 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            h2 {
+                text-align: center;
+            }
+
+            h4 {
+                text-align: center;
+            }
+        </style>
+        <div class="container">
+            <h1> Olá, seja bem vindo à cliniLucas! </h1>
+            <h2> Aqui, você poderá realizar a sua consulta e ver todos os médicos disponíveis. </h2>
+            {% for i in medicos %}
+            <a href="{% url 'listar_medicos.html' %}">Ver médicos</a>
+            <a href="{% url 'form_consulta.html' %}">Realizar uma consulta</a>
+            {% endfor %}
+        </div>
+    </body>
+</html>
